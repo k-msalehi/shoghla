@@ -2,9 +2,8 @@
 
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
-use Illuminate\Support\Facades\Schema;
 
-return new class extends Migration
+class CreateCategoriesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -14,13 +13,13 @@ return new class extends Migration
     public function up()
     {
         Schema::create('categories', function (Blueprint $table) {
-            $table->id();
-            $table->string('title', 255);
-            $table->string('slug', 255);
-            $table->text('description');
-            $table->string('keywords', 255);
+            $table->increments('id');
             $table->timestamps();
-        });
+            $table->string('title')->nullable();
+            $table->string('slug')->nullable();
+            $table->text('description')->nullable();
+            $table->string('keywords')->nullable();
+            });
     }
 
     /**
@@ -30,6 +29,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('categories');
+        Schema::drop('categories');
     }
-};
+}

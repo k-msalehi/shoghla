@@ -15,7 +15,16 @@ return new class extends Migration
     {
         Schema::create('sellers', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
+            $table->foreignId('user_id')->nullable()->constrained('users')->nullOnDelete();
+            $table->foreignId('category_id')->nullable()->constrained('categories')->nullOnDelete();
+            $table->string('title', 255);
+            $table->string('tel', 12);
+            $table->string('image', 255);
+            $table->string('keywords', 255);
+            $table->text('address')->nullable();
+            $table->text('description')->nullable();
+            $table->text('note')->nullable();
+            $table->timestamps();;
         });
     }
 
