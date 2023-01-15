@@ -10,6 +10,6 @@ class Seller extends Model
     use HasFactory;
 
     protected $fillable = ['user_id', 'category_id', 'title', 'slug','tel','image','keywords','address','description','note'];
-    protected $guarded = [];
+    // protected $guarded = [];
 
 }

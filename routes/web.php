@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\SellerController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,8 +21,5 @@ Route::get('/', function () {
 Route::resource('admin/category', 'App\Http\Controllers\Admin\CategoryController');
 
 Route::resource('admin/seller', 'App\Http\Controllers\Admin\SellerController');
-Route::resource('admin/seller', 'App\Http\Controllers\Admin\SellerController');
-Route::resource('admin/seller', 'App\Http\Controllers\Admin\SellerController');
-Route::resource('admin/seller', 'App\Http\Controllers\Admin\SellerController');
-Route::resource('admin/seller', 'App\Http\Controllers\Admin\SellerController');
-Route::resource('admin/seller', 'App\Http\Controllers\Admin\SellerController');
+
+Route::resource('sellers', SellerController::class);
