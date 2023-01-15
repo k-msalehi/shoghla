@@ -18,11 +18,14 @@ return new class extends Migration
             $table->foreignId('user_id')->nullable()->constrained('users')->nullOnDelete();
             $table->foreignId('category_id')->nullable()->constrained('categories')->nullOnDelete();
             $table->string('title', 255);
+            $table->string('slug', 128)->nullable()->unique();
             $table->string('tel', 12);
-            $table->string('image', 255);
-            $table->string('keywords', 255);
+            $table->string('province',32)->nullable();
+            $table->string('city',32)->nullable();
             $table->text('address')->nullable();
+            $table->string('image', 255)->nullable();
             $table->text('description')->nullable();
+            $table->string('keywords', 255)->nullable();
             $table->text('note')->nullable();
             $table->timestamps();;
         });

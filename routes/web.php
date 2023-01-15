@@ -18,4 +18,10 @@ Route::get('/', function () {
 });
 
 Route::resource('admin/category', 'App\Http\Controllers\Admin\CategoryController');
-Route::resource('admin/category', 'App\Http\Controllers\Admin\CategoryController');
+
+Route::resource('admin/seller', 'App\Http\Controllers\Admin\SellerController');
+Route::resource('admin/seller', 'App\Http\Controllers\Admin\SellerController');
+Route::resource('admin/seller', 'App\Http\Controllers\Admin\SellerController');
+Route::resource('admin/seller', 'App\Http\Controllers\Admin\SellerController');
+Route::resource('admin/seller', 'App\Http\Controllers\Admin\SellerController');
+Route::resource('admin/seller', 'App\Http\Controllers\Admin\SellerController');
